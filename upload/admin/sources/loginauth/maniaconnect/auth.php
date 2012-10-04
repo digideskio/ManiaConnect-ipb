@@ -66,7 +66,8 @@ public function authenticate( $username, $email_address, $password )
     $maniaconnect_url = "https://ws.maniaplanet.com/oauth2/authorize/";
     
     // I say, Does this user be who he claims to be?
-    // $maniaconnect_id = $this->request['use_maniaconnect'] ? ManiaConnectSignIn::validate() : null;
+    $maniaconnect = new \Maniaplanet\WebServices\ManiaConnect\Player('your_api_username', 'your_api_password');
+    $maniaconnect_id = $maniaconnect->getPlayer();
 
     $this->registry->output->silentRedirect( $maniaconnect_url );
     
