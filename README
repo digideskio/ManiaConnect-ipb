@@ -1,0 +1,10 @@
+ManiaConnect_IPB is a Invision Power Board hook which offers a way to users to login in a Invision Power Board forum through ManiaConnect (for users of the ManiaPlanet plateform)
+
+CHANGELOG
+====================================================
+
+0.0.1
+------------------------------------
+- Initial push to GitHub
+- Creation of the hook
+- Totally non-functionnal
