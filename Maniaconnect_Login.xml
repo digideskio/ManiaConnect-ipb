@@ -4,10 +4,10 @@
     <config>
       <hook_name>Maniaconnect Login</hook_name>
       <hook_desc>Displays the buttons required to allow the user to login with maniaconnect</hook_desc>
-      <hook_author>Adam Lavin</hook_author>
-      <hook_email>adam@lavoaster.co.uk</hook_email>
-      <hook_website>http://www.lavoaster.co.uk</hook_website>
-      <hook_update_check>http://www.lavoaster.co.uk/update.php?app=maniaconnect_login</hook_update_check>
+      <hook_author>Cedric Anthony</hook_author>
+      <hook_email>cerovan@nadeo.com</hook_email>
+      <hook_website>http://www.maniaplanet.com</hook_website>
+      <hook_update_check>http://www.maniaplanet.com/update.php?app=maniaconnect_login</hook_update_check>
       <hook_requirements><![CDATA[a:3:{s:21:"required_applications";a:0:{}s:20:"hook_php_version_min";s:0:"";s:20:"hook_php_version_max";s:0:"";}]]></hook_requirements>
       <hook_version_human>1.0.0</hook_version_human>
       <hook_version_long>10000</hook_version_long>
@@ -24,7 +24,7 @@
       <hook_data><![CDATA[a:8:{s:12:"dataLocation";s:0:"";s:14:"libApplication";s:0:"";s:15:"classToOverload";s:0:"";s:9:"skinGroup";s:11:"skin_global";s:12:"skinFunction";s:11:"inlineLogin";s:4:"type";s:2:"if";s:2:"id";s:14:"haswindowslive";s:8:"position";s:10:"post.endif";}]]></hook_data>
       <hooks_source><![CDATA[<?php
 /**
- * @author Adam Lavin (Lavoaster)
+ * @author Cedric Anthony (Cerovan)
  * @copyright 2012
  * @license http://opensource.org/licenses/mit-license.php The MIT License
  */
@@ -59,7 +59,7 @@ HTML;
       <hook_data><![CDATA[a:8:{s:12:"dataLocation";s:0:"";s:14:"libApplication";s:0:"";s:15:"classToOverload";s:0:"";s:9:"skinGroup";s:11:"skin_global";s:12:"skinFunction";s:11:"inlineLogin";s:4:"type";s:2:"if";s:2:"id";s:16:"registerServices";s:8:"position";s:11:"pre.startif";}]]></hook_data>
       <hooks_source><![CDATA[<?php
 /**
- * @author Adam Lavin (Lavoaster)
+ * @author Cedric Anthony (Cerovan)
  * @copyright 2012
  * @license http://opensource.org/licenses/mit-license.php The MIT License
  */
@@ -98,7 +98,7 @@ HTML;
       <hook_data><![CDATA[a:8:{s:12:"dataLocation";s:14:"topicViewQuery";s:14:"libApplication";s:0:"";s:15:"classToOverload";s:0:"";s:9:"skinGroup";N;s:12:"skinFunction";N;s:4:"type";N;s:2:"id";N;s:8:"position";N;}]]></hook_data>
       <hooks_source><![CDATA[<?php
 /**
- * @author Adam Lavin (Lavoaster) (Thanks PW Atticus and Micheal from IPS Forums)
+ * @author Cedric Anthony (Cerovan) (Thanks PW Atticus and Micheal from IPS Forums)
  * @copyright 2012
  * @license http://opensource.org/licenses/mit-license.php The MIT License
  */
@@ -123,7 +123,7 @@ class maniaconnectHandleData
       <hook_data><![CDATA[a:8:{s:12:"dataLocation";s:0:"";s:14:"libApplication";s:0:"";s:15:"classToOverload";s:0:"";s:9:"skinGroup";s:10:"skin_login";s:12:"skinFunction";s:13:"showLogInForm";s:4:"type";s:2:"if";s:2:"id";s:14:"haswindowslive";s:8:"position";s:10:"post.endif";}]]></hook_data>
       <hooks_source><![CDATA[<?php
 /**
- * @author Adam Lavin (Lavoaster)
+ * @author Cedric Anthony (Cerovan)
  * @copyright 2012
  * @license http://opensource.org/licenses/mit-license.php The MIT License
  */
@@ -157,7 +157,7 @@ HTML;
       <hook_data><![CDATA[a:8:{s:12:"dataLocation";s:0:"";s:14:"libApplication";s:0:"";s:15:"classToOverload";s:0:"";s:9:"skinGroup";s:11:"skin_global";s:12:"skinFunction";s:14:"globalTemplate";s:4:"type";s:2:"if";s:2:"id";s:10:"limWindows";s:8:"position";s:10:"post.endif";}]]></hook_data>
       <hooks_source><![CDATA[<?php
 /**
- * @author Adam Lavin (Lavoaster)
+ * @author Cedric Anthony (Cerovan)
  * @copyright 2012
  * @license http://opensource.org/licenses/mit-license.php The MIT License
  */
@@ -185,7 +185,7 @@ class maniaconnectDisplayIcon
       <hook_data><![CDATA[a:8:{s:12:"dataLocation";s:0:"";s:14:"libApplication";s:0:"";s:15:"classToOverload";s:0:"";s:9:"skinGroup";s:13:"skin_register";s:12:"skinFunction";s:12:"registerForm";s:4:"type";s:2:"if";s:2:"id";s:16:"registerServices";s:8:"position";s:11:"pre.startif";}]]></hook_data>
       <hooks_source><![CDATA[<?php
 /**
- * @author Adam Lavin (Lavoaster)
+ * @author Cedric Anthony (Cerovan)
  * @copyright 2012
  * @license http://opensource.org/licenses/mit-license.php The MIT License
  */
@@ -228,7 +228,7 @@ HTML;
       <hook_data><![CDATA[a:8:{s:12:"dataLocation";s:0:"";s:14:"libApplication";s:0:"";s:15:"classToOverload";s:0:"";s:9:"skinGroup";s:13:"skin_register";s:12:"skinFunction";s:12:"registerForm";s:4:"type";s:2:"if";s:2:"id";s:10:"twitterBox";s:8:"position";s:10:"post.endif";}]]></hook_data>
       <hooks_source><![CDATA[<?php
 /**
- * @author Adam Lavin (Lavoaster)
+ * @author Cedric Anthony (Cerovan)
  * @copyright 2012
  * @license http://opensource.org/licenses/mit-license.php The MIT License
  */
@@ -263,7 +263,7 @@ HTML;
       <hook_data><![CDATA[a:8:{s:12:"dataLocation";s:0:"";s:14:"libApplication";s:4:"core";s:15:"classToOverload";s:16:"usercpForms_core";s:9:"skinGroup";N;s:12:"skinFunction";N;s:4:"type";N;s:2:"id";N;s:8:"position";N;}]]></hook_data>
       <hooks_source><![CDATA[<?php
 /**
- * @author Adam Lavin (Lavoaster)
+ * @author Cedric Anthony (Cerovan)
  * @copyright 2012
  * @license http://opensource.org/licenses/mit-license.php The MIT License
  */
