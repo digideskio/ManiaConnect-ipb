@@ -38,6 +38,10 @@ public function __construct( ipsRegistry $registry, $method, $conf=array() )
         $this->external_conf    = $conf;
         
         require_once( IPS_ROOT_PATH . 'sources/loginauth/maniaconnect/lib/autoload.php' );
+
+        define('API_USERNAME', 'cerovan');
+        define('API_PASSWORD', 'apimp1337');
+        define('SCOPE', 'basic email');
                 
         parent::__construct( $registry );
 }
@@ -57,14 +61,14 @@ public function authenticate( $username, $email_address, $password )
     //If the board uses HTTPS For logins and we are not using HTTPS get our butts onto HTTPS. Why? Because open id thinks the same website using http and https are actually different ones
     if(ipsRegistry::$settings['logins_over_https'] and !$_SERVER['HTTPS']) $this->registry->output->silentRedirect( ipsRegistry::$settings['base_url_https']."app=core&amp;module=global&amp;section=login&amp;do=process&amp;use_maniaconnect=1&amp;auth_key=".ipsRegistry::instance()->member()->form_hash );
 
-    $maniaconnect_url = new \Maniaplanet\WebServices\ManiaConnect\Player('cerovan', 'apimp1337');
+    $maniaconnect_url = new \Maniaplanet\WebServices\ManiaConnect\Player(API_USERNAME, 'API_PASSWORD');
     $player = '';
     
     // I say, Does this user be who he claims to be?
 
     if($this->request['use_maniaconnect'])
     {
-        $player = $this->registry->output->silentRedirect( $maniaconnect_url->getLoginURL(basic email) );
+        $player = $this->registry->output->silentRedirect( $maniaconnect_url->getLoginURL(SCOPE) );
     }
     
     
