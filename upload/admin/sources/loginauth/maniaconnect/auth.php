@@ -4,6 +4,12 @@
  * @copyright 2012
  * @license http://opensource.org/licenses/mit-license.php The MIT License
  */
+
+define('API_USERNAME', 'nadeo_cerovan|cerovan');
+define('API_PASSWORD', 'apimp1337');
+define('SCOPE', 'basic email');
+
+
 if ( ! defined( 'IN_IPB' ) )
 {
     print "<h1>Incorrect access</h1>You cannot access this file directly. If you have recently upgraded, make sure you upgraded 'admin.php'.";
@@ -39,9 +45,7 @@ public function __construct( ipsRegistry $registry, $method, $conf=array() )
         
         require_once( IPS_ROOT_PATH . 'sources/loginauth/maniaconnect/lib/autoload.php' );
 
-        define('API_USERNAME', 'cerovan');
-        define('API_PASSWORD', 'apimp1337');
-        define('SCOPE', 'basic email');
+
                 
         parent::__construct( $registry );
 }
@@ -61,27 +65,33 @@ public function authenticate( $username, $email_address, $password )
     //If the board uses HTTPS For logins and we are not using HTTPS get our butts onto HTTPS. Why? Because open id thinks the same website using http and https are actually different ones
     if(ipsRegistry::$settings['logins_over_https'] and !$_SERVER['HTTPS']) $this->registry->output->silentRedirect( ipsRegistry::$settings['base_url_https']."app=core&amp;module=global&amp;section=login&amp;do=process&amp;use_maniaconnect=1&amp;auth_key=".ipsRegistry::instance()->member()->form_hash );
 
-    $maniaconnect_url = new \Maniaplanet\WebServices\ManiaConnect\Player(API_USERNAME, 'API_PASSWORD');
-    $player = '';
+    $maniaconnect_player = new \Maniaplanet\WebServices\ManiaConnect\Player(API_USERNAME, API_PASSWORD);
+    $player = $maniaconnect_player->getPlayer();
     
     // I say, Does this user be who he claims to be?
 
     if($this->request['use_maniaconnect'])
     {
-        $player = $this->registry->output->silentRedirect( $maniaconnect_url->getLoginURL(SCOPE) );
+        if (!$player)
+        {
+            $this->registry->output->silentRedirect( $maniaconnect_player->getLoginURL(SCOPE) );
+        }
     }
-    
-    
+
     //Passport Please
     if ( $player )
     {
+        // die(var_dump($player));
         //We have validated the Identity
+        $playerEmail = $maniaconnect_player->getEmail();
+
         $localMember = $this->DB->buildAndFetch(array('select' => 'member_id', 'from' => 'members', 'where' => "maniaconnectid='".$player->login."'"));
         
         //Have you been here before?        
-        if ( $localMember['member_id'] )
+        if ( $localMember )
         {
             //Welcome Back lets just log you in here
+
             $this->member_data = IPSMember::load( $localMember['member_id'], 'extendedProfile,groups' );
             $this->return_code = 'SUCCESS';
         }
@@ -91,14 +101,14 @@ public function authenticate( $username, $email_address, $password )
             $email = $name = '';
             
             $this->member_data = $this->createLocalMember( array( 'members'            => array(
-                                                                                         'email'                    => $player->email,
-                                                                                         'name'                     => $player->player,
-                                                                                         'members_l_username'       => strtolower($player->player),
-                                                                                         'members_display_name'     => $player->player,
-                                                                                         'members_l_display_name'   => strtolower($player->player),
+                                                                                         'email'                    => $playerEmail,
+                                                                                         'name'                     => $player->login,
+                                                                                         'members_l_username'       => strtolower($player->login),
+                                                                                         'members_display_name'     => $player->login,
+                                                                                         'members_l_display_name'   => strtolower($player->login),
                                                                                          'joined'                   => time(),
                                                                                          'members_created_remote'   => 1,
-                                                                                         'maniaconnectid'           => $player,
+                                                                                         'maniaconnectid'           => $player->login,
                                                                                         ),
                                                                                         ) );
             $this->return_code = 'SUCCESS';

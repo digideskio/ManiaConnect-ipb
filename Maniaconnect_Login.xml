@@ -301,29 +301,36 @@ class maniaconnectLinkAccount extends (~extends~)
     {
         if ( $current_area == 'managemaniaconnect' )
         {
-            require_once( IPS_ROOT_PATH . 'sources/loginauth/maniaconnect/lib/maniaconnect_openid.php' );
+            require_once( IPS_ROOT_PATH . 'sources/loginauth/maniaconnect/lib/autoload.php' );
+
+            define('API_USERNAME', 'nadeo_cerovan|cerovan ');
+            define('API_PASSWORD', 'apimp1337');
+            define('SCOPE', 'basic email');
+
+            $maniaconnect_url = new \Maniaplanet\WebServices\ManiaConnect\Player(API_USERNAME, API_PASSWORD);
+
             $data = array();
-            $data['url'] = ManiaconnectSignIn::genUrl($this->settings['board_url'].'/interface/board/linkmaniaconnect.php');
+            $data['url'] = $maniaconnect_url->getLoginURL(SCOPE);
             $this->hide_form_and_save_button = 1;
 
             if($_GET['maniaconnect'] == 'process')
-            {  
-                $maniaconnect_id = ManiaconnectSignIn::validate();
+            {
+                $player = $maniaconnect_url->getLoginURL(SCOPE)
 
-                if ( $maniaconnect_id )
+                if ( $player )
                 {
                     /* Test locally */
-                    $localMember = $this->DB->buildAndFetch(array('select' => '*', 'from' => 'members', 'where' => "maniaconnectid='".$maniaconnect_id."'"));
+                    $localMember = $this->DB->buildAndFetch(array('select' => '*', 'from' => 'members', 'where' => "maniaconnectid='".$player->email."'"));
                     $notify = '';
                     if ( $localMember['member_id'] && !$localMember['members_display_name'] )
                     {
                         IPSMember::remove( $localMember['member_id'] , false );
-                        IPSMember::save( $this->memberData['member_id'], array( 'core' => array( 'maniaconnectid' => $maniaconnect_id ) ) );
+                        IPSMember::save( $this->memberData['member_id'], array( 'core' => array( 'maniaconnectid' => $player->email ) ) );
                         $notify .= "&completed=1";
                     }
                     elseif( !$localMember['member_id'])
                     {
-                        IPSMember::save( $this->memberData['member_id'], array( 'core' => array( 'maniaconnectid' => $maniaconnect_id ) ) );
+                        IPSMember::save( $this->memberData['member_id'], array( 'core' => array( 'maniaconnectid' => $player->email ) ) );
                         $notify .= "&completed=1";
                     }
                     else
@@ -357,7 +364,7 @@ class maniaconnectInstall
     {
         if(!ipsRegistry::DB()->checkForField('maniaconnectid', 'members'))
         {
-            ipsRegistry::DB()->addField('members', 'maniaconnectid', 'VARCHAR(17)', NULL);
+            ipsRegistry::DB()->addField('members', 'maniaconnectid', 'VARCHAR(32)', NULL);
         }
     }
     public function uninstall()
