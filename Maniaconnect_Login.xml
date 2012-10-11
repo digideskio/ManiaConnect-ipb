@@ -24,9 +24,12 @@
       <hook_data><![CDATA[a:8:{s:12:"dataLocation";s:0:"";s:14:"libApplication";s:0:"";s:15:"classToOverload";s:0:"";s:9:"skinGroup";s:11:"skin_global";s:12:"skinFunction";s:11:"inlineLogin";s:4:"type";s:2:"if";s:2:"id";s:14:"haswindowslive";s:8:"position";s:10:"post.endif";}]]></hook_data>
       <hooks_source><![CDATA[<?php
 /**
- * @author Cedric Anthony (Cerovan)
- * @copyright 2012
- * @license http://opensource.org/licenses/mit-license.php The MIT License
+ * ManiaConnect-IPB - Allow users to sign into IPB through ManiaConnect service (ManiaPlanet)
+ * 
+ * @see         https://github.com/Anthodev/ManiaConnect-ipb
+ * @copyright   Copyright (c) 2009-2012 NADEO (http://www.nadeo.com)
+ * @license     http://www.gnu.org/licenses/lgpl.html LGPL License 3
+ * @author      Cedric Anthony (Cerovan)
  */
 class maniaconnectDisplayButtonAjax
 {
@@ -59,9 +62,12 @@ HTML;
       <hook_data><![CDATA[a:8:{s:12:"dataLocation";s:0:"";s:14:"libApplication";s:0:"";s:15:"classToOverload";s:0:"";s:9:"skinGroup";s:11:"skin_global";s:12:"skinFunction";s:11:"inlineLogin";s:4:"type";s:2:"if";s:2:"id";s:16:"registerServices";s:8:"position";s:11:"pre.startif";}]]></hook_data>
       <hooks_source><![CDATA[<?php
 /**
- * @author Cedric Anthony (Cerovan)
- * @copyright 2012
- * @license http://opensource.org/licenses/mit-license.php The MIT License
+ * ManiaConnect-IPB - Allow users to sign into IPB through ManiaConnect service (ManiaPlanet)
+ * 
+ * @see         https://github.com/Anthodev/ManiaConnect-ipb
+ * @copyright   Copyright (c) 2009-2012 NADEO (http://www.nadeo.com)
+ * @license     http://www.gnu.org/licenses/lgpl.html LGPL License 3
+ * @author      Cedric Anthony (Cerovan)
  */
 class maniaconnectDisplayButtonAjax2
 {
@@ -98,9 +104,12 @@ HTML;
       <hook_data><![CDATA[a:8:{s:12:"dataLocation";s:14:"topicViewQuery";s:14:"libApplication";s:0:"";s:15:"classToOverload";s:0:"";s:9:"skinGroup";N;s:12:"skinFunction";N;s:4:"type";N;s:2:"id";N;s:8:"position";N;}]]></hook_data>
       <hooks_source><![CDATA[<?php
 /**
- * @author Cedric Anthony (Cerovan) (Thanks PW Atticus and Micheal from IPS Forums)
- * @copyright 2012
- * @license http://opensource.org/licenses/mit-license.php The MIT License
+ * ManiaConnect-IPB - Allow users to sign into IPB through ManiaConnect service (ManiaPlanet)
+ * 
+ * @see         https://github.com/Anthodev/ManiaConnect-ipb
+ * @copyright   Copyright (c) 2009-2012 NADEO (http://www.nadeo.com)
+ * @license     http://www.gnu.org/licenses/lgpl.html LGPL License 3
+ * @author      Cedric Anthony (Cerovan)
  */
 class maniaconnectHandleData 
 {
@@ -123,9 +132,12 @@ class maniaconnectHandleData
       <hook_data><![CDATA[a:8:{s:12:"dataLocation";s:0:"";s:14:"libApplication";s:0:"";s:15:"classToOverload";s:0:"";s:9:"skinGroup";s:10:"skin_login";s:12:"skinFunction";s:13:"showLogInForm";s:4:"type";s:2:"if";s:2:"id";s:14:"haswindowslive";s:8:"position";s:10:"post.endif";}]]></hook_data>
       <hooks_source><![CDATA[<?php
 /**
- * @author Cedric Anthony (Cerovan)
- * @copyright 2012
- * @license http://opensource.org/licenses/mit-license.php The MIT License
+ * ManiaConnect-IPB - Allow users to sign into IPB through ManiaConnect service (ManiaPlanet)
+ * 
+ * @see         https://github.com/Anthodev/ManiaConnect-ipb
+ * @copyright   Copyright (c) 2009-2012 NADEO (http://www.nadeo.com)
+ * @license     http://www.gnu.org/licenses/lgpl.html LGPL License 3
+ * @author      Cedric Anthony (Cerovan)
  */
 class maniaconnectDisplayButton
 {
@@ -157,9 +169,12 @@ HTML;
       <hook_data><![CDATA[a:8:{s:12:"dataLocation";s:0:"";s:14:"libApplication";s:0:"";s:15:"classToOverload";s:0:"";s:9:"skinGroup";s:11:"skin_global";s:12:"skinFunction";s:14:"globalTemplate";s:4:"type";s:2:"if";s:2:"id";s:10:"limWindows";s:8:"position";s:10:"post.endif";}]]></hook_data>
       <hooks_source><![CDATA[<?php
 /**
- * @author Cedric Anthony (Cerovan)
- * @copyright 2012
- * @license http://opensource.org/licenses/mit-license.php The MIT License
+ * ManiaConnect-IPB - Allow users to sign into IPB through ManiaConnect service (ManiaPlanet)
+ * 
+ * @see         https://github.com/Anthodev/ManiaConnect-ipb
+ * @copyright   Copyright (c) 2009-2012 NADEO (http://www.nadeo.com)
+ * @license     http://www.gnu.org/licenses/lgpl.html LGPL License 3
+ * @author      Cedric Anthony (Cerovan)
  */
 class maniaconnectDisplayIcon
 {
@@ -185,9 +200,12 @@ class maniaconnectDisplayIcon
       <hook_data><![CDATA[a:8:{s:12:"dataLocation";s:0:"";s:14:"libApplication";s:0:"";s:15:"classToOverload";s:0:"";s:9:"skinGroup";s:13:"skin_register";s:12:"skinFunction";s:12:"registerForm";s:4:"type";s:2:"if";s:2:"id";s:16:"registerServices";s:8:"position";s:11:"pre.startif";}]]></hook_data>
       <hooks_source><![CDATA[<?php
 /**
- * @author Cedric Anthony (Cerovan)
- * @copyright 2012
- * @license http://opensource.org/licenses/mit-license.php The MIT License
+ * ManiaConnect-IPB - Allow users to sign into IPB through ManiaConnect service (ManiaPlanet)
+ * 
+ * @see         https://github.com/Anthodev/ManiaConnect-ipb
+ * @copyright   Copyright (c) 2009-2012 NADEO (http://www.nadeo.com)
+ * @license     http://www.gnu.org/licenses/lgpl.html LGPL License 3
+ * @author      Cedric Anthony (Cerovan)
  */
 class maniaconnectDisplayButtonRegister2
 {
@@ -228,9 +246,12 @@ HTML;
       <hook_data><![CDATA[a:8:{s:12:"dataLocation";s:0:"";s:14:"libApplication";s:0:"";s:15:"classToOverload";s:0:"";s:9:"skinGroup";s:13:"skin_register";s:12:"skinFunction";s:12:"registerForm";s:4:"type";s:2:"if";s:2:"id";s:10:"twitterBox";s:8:"position";s:10:"post.endif";}]]></hook_data>
       <hooks_source><![CDATA[<?php
 /**
- * @author Cedric Anthony (Cerovan)
- * @copyright 2012
- * @license http://opensource.org/licenses/mit-license.php The MIT License
+ * ManiaConnect-IPB - Allow users to sign into IPB through ManiaConnect service (ManiaPlanet)
+ * 
+ * @see         https://github.com/Anthodev/ManiaConnect-ipb
+ * @copyright   Copyright (c) 2009-2012 NADEO (http://www.nadeo.com)
+ * @license     http://www.gnu.org/licenses/lgpl.html LGPL License 3
+ * @author      Cedric Anthony (Cerovan)
  */
 class maniaconnectDisplayButtonRegister
 {
@@ -263,9 +284,12 @@ HTML;
       <hook_data><![CDATA[a:8:{s:12:"dataLocation";s:0:"";s:14:"libApplication";s:4:"core";s:15:"classToOverload";s:16:"usercpForms_core";s:9:"skinGroup";N;s:12:"skinFunction";N;s:4:"type";N;s:2:"id";N;s:8:"position";N;}]]></hook_data>
       <hooks_source><![CDATA[<?php
 /**
- * @author Cedric Anthony (Cerovan)
- * @copyright 2012
- * @license http://opensource.org/licenses/mit-license.php The MIT License
+ * ManiaConnect-IPB - Allow users to sign into IPB through ManiaConnect service (ManiaPlanet)
+ * 
+ * @see         https://github.com/Anthodev/ManiaConnect-ipb
+ * @copyright   Copyright (c) 2009-2012 NADEO (http://www.nadeo.com)
+ * @license     http://www.gnu.org/licenses/lgpl.html LGPL License 3
+ * @author      Cedric Anthony (Cerovan)
  */
 class maniaconnectLinkAccount extends (~extends~)
 {         
@@ -305,32 +329,53 @@ class maniaconnectLinkAccount extends (~extends~)
 
             define('API_USERNAME', 'nadeo_cerovan|cerovan ');
             define('API_PASSWORD', 'apimp1337');
-            define('SCOPE', 'basic email');
+            define('SCOPE', 'basic');
 
-            $maniaconnect_url = new \Maniaplanet\WebServices\ManiaConnect\Player(API_USERNAME, API_PASSWORD);
+            $maniaconnect_player = new \Maniaplanet\WebServices\ManiaConnect\Player(API_USERNAME, API_PASSWORD);
+            $player = $maniaconnect_player->getPlayer();
 
             $data = array();
-            $data['url'] = $maniaconnect_url->getLoginURL(SCOPE);
+            $data['url'] = $maniaconnect_player->getLoginURL(SCOPE);
             $this->hide_form_and_save_button = 1;
 
             if($_GET['maniaconnect'] == 'process')
             {
-                $player = $maniaconnect_url->getLoginURL(SCOPE)
+                if (!$player)
+                {
+                    $this->registry->output->silentRedirect( $maniaconnect_player->getLoginURL(SCOPE) );
+                }
 
+                // if ( $player )
+                // {
+                //     /* Test locally */
+                //     $localMember = $this->DB->buildAndFetch(array('select' => '*', 'from' => 'members', 'where' => "maniaconnectid='".$player->login."'"));
+                //     die( var_dump( $this->memberData['name'] ) );
+                //     $notify = '';
+                //     if ( $localMember && !$localMember['maniaconnectid'] )
+                //     {
+                //         IPSMember::remove( $localMember['member_id'] , false );
+                //         IPSMember::save( $this->memberData['member_id'], array( 'core' => array( 'maniaconnectid' => $player->login ) ) );
+                //         $notify .= "&completed=1";
+                //     }
+                //     elseif( !$localMember)
+                //     {
+                //         IPSMember::save( $this->memberData['member_id'], array( 'core' => array( 'maniaconnectid' => $player->login ) ) );
+                //         $notify .= "&completed=1";
+                //     }
+                //     else
+                //     {
+                //         $notify .= "&error=true";
+                //     }
+                // }
                 if ( $player )
                 {
                     /* Test locally */
-                    $localMember = $this->DB->buildAndFetch(array('select' => '*', 'from' => 'members', 'where' => "maniaconnectid='".$player->email."'"));
+                    $localMember = $this->DB->buildAndFetch(array('select' => '*', 'from' => 'members', 'where' => "maniaconnectid='".$player->login."'"));
                     $notify = '';
-                    if ( $localMember['member_id'] && !$localMember['members_display_name'] )
+                    if ( $localMember && !$localMember['maniaconnectid'] )
                     {
                         IPSMember::remove( $localMember['member_id'] , false );
-                        IPSMember::save( $this->memberData['member_id'], array( 'core' => array( 'maniaconnectid' => $player->email ) ) );
-                        $notify .= "&completed=1";
-                    }
-                    elseif( !$localMember['member_id'])
-                    {
-                        IPSMember::save( $this->memberData['member_id'], array( 'core' => array( 'maniaconnectid' => $player->email ) ) );
+                        IPSMember::save( $this->memberData['member_id'], array( 'core' => array( 'maniaconnectid' => $player->login ) ) );
                         $notify .= "&completed=1";
                     }
                     else

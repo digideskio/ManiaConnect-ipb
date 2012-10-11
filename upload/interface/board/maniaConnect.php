@@ -1,9 +1,12 @@
 <?php
 
 /**
- * @author Adam Lavin (Lavoaster)
- * @copyright 2012
- * @license http://opensource.org/licenses/mit-license.php The MIT License
+ * ManiaConnect-IPB - Allow users to sign into IPB through ManiaConnect service (ManiaPlanet)
+ * 
+ * @see         https://github.com/Anthodev/ManiaConnect-ipb
+ * @copyright   Copyright (c) 2009-2012 NADEO (http://www.nadeo.com)
+ * @license     http://www.gnu.org/licenses/lgpl.html LGPL License 3
+ * @author      Cedric Anthony (Cerovan)
  */
 
 /**
