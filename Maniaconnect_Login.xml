@@ -348,7 +348,7 @@ class maniaconnectLinkAccount extends (~extends~)
                 // if ( $player )
                 // {
                 //     /* Test locally */
-                //     $localMember = $this->DB->buildAndFetch(array('select' => '*', 'from' => 'members', 'where' => "maniaconnectid='".$player->login."'"));
+                //     $localMember = $this->DB->buildAndFetch(array('select' => '*', 'from' => 'members', 'where' => "maniaconnectid='".$player->login."' AND member_id!='{$this->memberData['member_id']}));
                 //     die( var_dump( $this->memberData['name'] ) );
                 //     $notify = '';
                 //     if ( $localMember && !$localMember['maniaconnectid'] )
@@ -370,11 +370,16 @@ class maniaconnectLinkAccount extends (~extends~)
                 if ( $player )
                 {
                     /* Test locally */
-                    $localMember = $this->DB->buildAndFetch(array('select' => '*', 'from' => 'members', 'where' => "maniaconnectid='".$player->login."'"));
+                     $localMember = $this->DB->buildAndFetch(array('select' => 'member_id', 'from' => 'members', 'where' => "maniaconnectid='".$player->login."' AND member_id=='{$this->memberData['member_id']}'"));
                     $notify = '';
-                    if ( $localMember && !$localMember['maniaconnectid'] )
+                    if ( $localMember )
                     {
                         IPSMember::remove( $localMember['member_id'] , false );
+                        IPSMember::save( $this->memberData['member_id'], array( 'core' => array( 'maniaconnectid' => $player->login ) ) );
+                        $notify .= "&completed=1";
+                    }
+                    elseif( !$localMember)
+                    {
                         IPSMember::save( $this->memberData['member_id'], array( 'core' => array( 'maniaconnectid' => $player->login ) ) );
                         $notify .= "&completed=1";
                     }
